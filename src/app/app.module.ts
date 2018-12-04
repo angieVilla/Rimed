@@ -7,8 +7,8 @@ import { EspecialistasComponent } from './especialistas/especialistas.component'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    EspecialistasComponent
+    AppComponent
+    // EspecialistasComponent
   ],
   imports: [
     BrowserModule,
