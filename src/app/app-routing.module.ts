@@ -1,14 +1,20 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { InicioComponent } from './inicio/inicio.component';
+import { EspecialistasComponent } from './especialistas/especialistas.component';
 
 const routes: Routes = [
   {
     path: 'especialistas',
-    component: especialistasComponent
-  },
+    component: EspecialistasComponent
+  }/* ,
   {
     path:'agendar-citas',
     component: AgendarCitasComponent
+  }*/ ,
+  {
+    path: '',
+    component: InicioComponent
   }
 ];
 
