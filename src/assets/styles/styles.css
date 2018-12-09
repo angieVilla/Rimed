@@ -33,7 +33,7 @@ a.btn{
 	color: #fff;
 	border-radius: 4px;
 	text-transform: uppercase;
-	background-color: #2196F3;
+	background-color: #0b1675;
 	font-weight: 800;
 	text-align: center;
 }
@@ -41,7 +41,7 @@ a.btn{
 hr{
 	width: 150px;
 	height: 2px;
-	background-color: #2196F3;
+	background-color: #0b1675;
 	border: 0;
 	margin-bottom: 80px;
 }
@@ -282,7 +282,7 @@ header nav li:last-child{
 
 .features .grid li i{
     font-size: 50px;
-    color: #2196F3;
+    color: #0ba09b; /*1d9e74*/
     margin-bottom: 25px;
 }
 

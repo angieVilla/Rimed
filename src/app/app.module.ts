@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
 import {  MatSelectModule } from '@angular/material';
+import { MatSidenavModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import {  MatSelectModule } from '@angular/material';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatSelectModule,
-
+    MatSidenavModule,
+    FormsModule 
 
   ],
   providers: [],
