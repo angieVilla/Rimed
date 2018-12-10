@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { EspecialistasComponent } from './especialistas/especialistas.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
+import {  MatSelectModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    EspecialistasComponent
+    EspecialistasComponent,
+    AgendarCitasComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSelectModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
