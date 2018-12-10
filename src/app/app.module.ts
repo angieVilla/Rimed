@@ -9,8 +9,8 @@ import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
 import {  MatSelectModule } from '@angular/material';
-import { MatSidenavModule } from '@angular/material';
-import {MatListModule} from '@angular/material';
+import { MatSidenavModule, MatListModule } from '@angular/material';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import {MatListModule} from '@angular/material';
     MatSelectModule,
     MatSidenavModule,
     MatListModule,
-    FormsModule 
+    FormsModule,
+    MatToolbarModule
 
   ],
   providers: [],

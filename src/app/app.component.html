@@ -9,10 +9,11 @@
     </mat-sidenav>
   
     <mat-sidenav-content>
-  
+      <mat-toolbar color="accent">My App</mat-toolbar>
       <button mat-button (click)="sidenav.toggle()">
         MENU
       </button>
+      
       <h2><a href="#"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></h2>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
