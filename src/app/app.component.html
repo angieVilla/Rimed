@@ -1,20 +1,10 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<header>
-  <h2><a href="#"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></h2>
-  <!-- <nav>
-    <li><a href="#" routerLink="/">Home</a></li>
-    <li><a href="#" routerLink="/especialistas">Especialistas</a></li>
-    <li><a href="#" routerLink= "/agendar-citas">Agendar citas</a></li>
-    <li><a href="#">Contacts</a></li>
-  </nav> --> 
-  
   <mat-sidenav-container class="example-container">
 
     <mat-sidenav #sidenav mode="side" [opened]="true" position="end">
       <mat-nav-list>
         <a mat-list-item href="#" routerLink="/">Home</a>
         <a mat-list-item href="#" routerLink="/especialistas">Especialistas</a>
-        <a mat-list-item href="#" routerLink="/">Agendar Cita</a>
+        <a mat-list-item href="#" routerLink="/agendar-citas">Agendar Cita</a>
       </mat-nav-list>
     </mat-sidenav>
   
@@ -23,17 +13,11 @@
       <button mat-button (click)="sidenav.toggle()">
         MENU
       </button>
-      
+      <h2><a href="#"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></h2>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   
-  </mat-sidenav-container>
-   
-  
+  </mat-sidenav-container>  
  
-</header>
 
 
-<router-outlet>
-
-
-</router-outlet>
