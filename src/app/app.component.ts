@@ -8,6 +8,5 @@ import {FormControl} from '@angular/forms';
 })
 export class AppComponent {
   title = 'Rimed';
-  mode = new FormControl('over');
-  shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host)); 
+  
 }

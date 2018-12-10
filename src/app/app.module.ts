@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
 import {  MatSelectModule } from '@angular/material';
 import { MatSidenavModule } from '@angular/material';
+import {MatListModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { MatSidenavModule } from '@angular/material';
     BrowserAnimationsModule,
     MatSelectModule,
     MatSidenavModule,
+    MatListModule,
     FormsModule 
 
   ],

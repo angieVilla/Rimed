@@ -8,8 +8,26 @@
     <li><a href="#">Contacts</a></li>
   </nav> --> 
   
+  <mat-sidenav-container class="example-container">
+
+    <mat-sidenav #sidenav mode="side" [opened]="true" position="end">
+      <mat-nav-list>
+        <a mat-list-item href="#" routerLink="/">Home</a>
+        <a mat-list-item href="#" routerLink="/especialistas">Especialistas</a>
+        <a mat-list-item href="#" routerLink="/">Agendar Cita</a>
+      </mat-nav-list>
+    </mat-sidenav>
   
-  <p><button mat-button (click)="sidenav.toggle()">Toggle</button></p>  
+    <mat-sidenav-content>
+  
+      <button mat-button (click)="sidenav.toggle()">
+        MENU
+      </button>
+      
+    </mat-sidenav-content>
+  
+  </mat-sidenav-container>
+   
   
  
 </header>
