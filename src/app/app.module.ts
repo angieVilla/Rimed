@@ -9,7 +9,7 @@ import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
 import {  MatSelectModule } from '@angular/material';
-import { MatSidenavModule, MatListModule } from '@angular/material';
+import { MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatExpansionModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
@@ -26,8 +26,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatSelectModule,
     MatSidenavModule,
     MatListModule,
+    MatButtonModule,
     FormsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule,
+    MatExpansionModule
 
   ],
   providers: [],

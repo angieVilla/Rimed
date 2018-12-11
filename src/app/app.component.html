@@ -1,20 +1,43 @@
   <mat-sidenav-container class="example-container">
 
-    <mat-sidenav #sidenav mode="side" [opened]="true" position="end">
-      <mat-nav-list>
-        <a mat-list-item href="#" routerLink="/">Home</a>
-        <a mat-list-item href="#" routerLink="/especialistas">Especialistas</a>
-        <a mat-list-item href="#" routerLink="/agendar-citas">Agendar Cita</a>
-      </mat-nav-list>
+    <mat-sidenav #sidenav mode="over" [opened]="true" position="end">
+      <mat-nav-list color="accent">
+        <a mat-list-item href="#" routerLink="/"> <i class="fa fa-institution IconMenu"></i>  Home</a>
+        <!-- <a mat-list-item href="#" routerLink="/especialistas">Especialistas</a>               -->
+      <mat-accordion [multi]="true">
+          <mat-expansion-panel *ngFor="let group of groups">
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ group.label }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <mat-nav-list>
+              
+              <a mat-list-item [routerLink]="link.path" *ngFor="let link of group.links">
+                  <i class="fa fa-bars"></i> {{link.label}}
+              </a>
+            </mat-nav-list>
+          </mat-expansion-panel>
+      </mat-accordion>
+      <a mat-list-item href="#" routerLink="/agendar-citas"> <i class="fa fa-calendar IconMenu"></i>  Agendar Cita</a>
+      <a mat-list-item href="#" routerLink="/agendar-citas"> <i class="fa fa-calendar-check-o IconMenu"></i>  Consultar Cita</a>
+    </mat-nav-list>
     </mat-sidenav>
   
     <mat-sidenav-content>
-      <mat-toolbar color="accent">My App</mat-toolbar>
-      <button mat-button (click)="sidenav.toggle()">
-        MENU
-      </button>
-      
-      <h2><a href="#"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></h2>
+      <!-- <mat-toolbar color="accent">
+
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon"><button class="btnMenu" mat-button (click)="sidenav.toggle()">MENU</button></mat-icon>
+          <h2><a href="#"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></h2>
+      </mat-toolbar> -->
+      <mat-toolbar color="accent">
+        <mat-toolbar-row>
+          <span><a href="/"><img class="Logorimed" src="../assets/img/RimedLogo2.png"></a></span>
+          <span class="example-spacer"></span>
+          <mat-icon class="example-icon"><button class="btnMenu" mat-button (click)="sidenav.toggle()"><i class="fa fa-bars"></i> MENU</button></mat-icon>
+        </mat-toolbar-row>
+      </mat-toolbar>
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   
