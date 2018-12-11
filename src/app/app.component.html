@@ -8,13 +8,13 @@
           <mat-expansion-panel *ngFor="let group of groups">
             <mat-expansion-panel-header>
               <mat-panel-title>
-                {{ group.label }}
+                  <i class="fa fa-group IconMenu"></i> {{ group.label }}
               </mat-panel-title>
             </mat-expansion-panel-header>
             <mat-nav-list>
               
               <a mat-list-item [routerLink]="link.path" *ngFor="let link of group.links">
-                  <i class="fa fa-bars"></i> {{link.label}}
+                  <i class="fa fa-leaf IconMenu"></i> {{link.label}}
               </a>
             </mat-nav-list>
           </mat-expansion-panel>

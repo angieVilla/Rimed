@@ -28,14 +28,14 @@ export class AppComponent {
     label: 'Especialidades',
     links: [{
       label: 'Fisioterapia',
-      path: '/conference/speakers',
+      path: '/especialistas',
     }, 
     {
       label: 'Fisiatria',
-      path: '/conference/sessions',
+      path: '/especialistas',
     }, {
       label: 'Terapia Ocupacional',
-      path: '/conference/schedule',
+      path: '/especialistas',
     }],
   }]
 }
