@@ -6,7 +6,7 @@ import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
 
 const routes: Routes = [
   {
-    path: 'especialistas',
+    path: 'especialistas/:name',
     component: EspecialistasComponent
   },
   {
