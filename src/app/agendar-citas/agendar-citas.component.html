@@ -1,8 +1,8 @@
 <div class="height-15"></div>
 <mat-form-field>
   <mat-select placeholder="Tipo de documento">
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
+    <mat-option *ngFor="let documento of documentos" [value]="documento.value">
+      {{documento.viewValue}}
     </mat-option>
   </mat-select>
 </mat-form-field>
@@ -16,3 +16,16 @@
       ="picker"></mat-datepicker-toggle>          
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
+
+  
+
+  <mat-form-field>
+    <mat-select placeholder="Listado de especialistas">
+      <mat-option *ngFor="let especialista of especialistas" [value]
+      ="especialistas">
+        {{especialista.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+
