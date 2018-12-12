@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 export interface Food {
   value: string;
   viewValue: string;

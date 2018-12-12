@@ -8,9 +8,10 @@ import { EspecialistasComponent } from './especialistas/especialistas.component'
 import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
-import {  MatSelectModule } from '@angular/material';
+import {  MatSelectModule,MatNativeDateModule,MatFormFieldModule,MatInputModule } from '@angular/material';
 import { MatSidenavModule, MatListModule, MatButtonModule, MatIconModule, MatExpansionModule } from '@angular/material';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,11 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     FormsModule,
     MatToolbarModule,
     MatIconModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatFormFieldModule,
+    MatInputModule 
 
   ],
   providers: [],
