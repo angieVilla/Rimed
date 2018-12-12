@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
+import {ActivatedRoute} from '@angular/router'; //indica que route esta activa
 
 @Component({
   selector: 'app-especialistas',
@@ -9,17 +10,26 @@ import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 export class EspecialistasComponent {
   displayedColumns = ['id', 'name', 'title','specialty','progress','color'];
   dataSource: MatTableDataSource<UserData>;
+  name : string;
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor() {
+  constructor(private route: ActivatedRoute) {
     // Create 100 users
     const users: UserData[] = [];
     for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
 
     // Assign the data to the data source for the table to render
     this.dataSource = new MatTableDataSource(users);
+    
+    //Asignar el valor de name para que muestre en que ruta estamos
+  
+    this.route.params.subscribe(
+      (params)=>{
+        this.name = params.name; 
+      }
+    )
    }
 
     /**
