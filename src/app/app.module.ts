@@ -8,6 +8,7 @@ import { EspecialistasComponent } from './especialistas/especialistas.component'
 import { InicioComponent } from './inicio/inicio.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AgendarCitasComponent } from './agendar-citas/agendar-citas.component';
+import {DialogEspecialistasComponent} from './dialog-especialistas/dialog-especialistas.component'
 
 import {
   MatAutocompleteModule,
@@ -55,6 +56,7 @@ import {CdkTableModule} from '@angular/cdk/table';
     InicioComponent,
     EspecialistasComponent,
     AgendarCitasComponent,
+    DialogEspecialistasComponent,
 
   ],
   imports: [
@@ -101,6 +103,10 @@ import {CdkTableModule} from '@angular/cdk/table';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  //entry components
+  entryComponents:[
+    DialogEspecialistasComponent
+  ]
 })
 export class AppModule { }
