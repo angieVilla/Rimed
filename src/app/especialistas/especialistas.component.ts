@@ -1,6 +1,13 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,Inject } from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {ActivatedRoute} from '@angular/router'; //indica que route esta activa
+import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material'; //activa el dialog
+import { DialogEspecialistasComponent } from '../dialog-especialistas/dialog-especialistas.component';
+
+export interface DialogData {
+  animal: string;
+  nameSp: string;
+}
 
 @Component({
   selector: 'app-especialistas',
@@ -8,6 +15,8 @@ import {ActivatedRoute} from '@angular/router'; //indica que route esta activa
   styleUrls: ['./especialistas.component.less']
 })
 export class EspecialistasComponent {
+
+  //PARA LA TABLA DE ESPECIALISTAS
   displayedColumns = ['id', 'name', 'title','specialty','progress','color'];
   dataSource: MatTableDataSource<UserData>;
   name : string;
@@ -15,7 +24,14 @@ export class EspecialistasComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private route: ActivatedRoute) {
+  //FIN TABLA DE ESPECIALISTAS
+
+  //DIALOG PERFIL ESP.
+  animal: string;
+  nameSp: string;
+
+
+  constructor(private route: ActivatedRoute,public dialog: MatDialog) {
     // Create 100 users
     const users: UserData[] = [];
     for (let i = 1; i <= 100; i++) { users.push(createNewUser(i)); }
@@ -29,7 +45,8 @@ export class EspecialistasComponent {
       (params)=>{
         this.name = params.name; 
       }
-    )
+    )     
+
    }
 
     /**
@@ -49,6 +66,19 @@ export class EspecialistasComponent {
 
   ngOnInit() {
   }  
+
+  //DIALOG
+  openDialog(): void {
+    const dialogRef = this.dialog.open(DialogEspecialistasComponent, {
+      width: '250px',
+      data: {name: this.name, animal: this.animal}
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
 
 }
 
@@ -84,6 +114,24 @@ export interface UserData {
   specialty: string;
   progress: string;
   color: string;
+}
+
+
+//DIALOG
+@Component({
+  selector: 'app-dialog-especialistas',
+  templateUrl: './especialistas.component.html',
+})
+export class DialogEspecialistasComponentDialog {
+
+  constructor(
+    public dialogRef: MatDialogRef<DialogEspecialistasComponentDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+
+  onNoClick(): void {
+    this.dialogRef.close();
+  }
+
 }
 
 
