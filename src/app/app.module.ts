@@ -103,7 +103,10 @@ import {CdkTableModule} from '@angular/cdk/table';
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
   //entry components
+  entryComponents:[
+    DialogEspecialistasComponent
+  ]
 })
 export class AppModule { }

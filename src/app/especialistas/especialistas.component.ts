@@ -1,13 +1,10 @@
-import { Component, OnInit, ViewChild,Inject } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator, MatSort, MatTableDataSource} from '@angular/material';
 import {ActivatedRoute} from '@angular/router'; //indica que route esta activa
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material'; //activa el dialog
 import { DialogEspecialistasComponent } from '../dialog-especialistas/dialog-especialistas.component';
 
-export interface DialogData {
-  animal: string;
-  nameSp: string;
-}
+
 
 @Component({
   selector: 'app-especialistas',
@@ -117,22 +114,7 @@ export interface UserData {
 }
 
 
-//DIALOG
-@Component({
-  selector: 'app-dialog-especialistas',
-  templateUrl: './especialistas.component.html',
-})
-export class DialogEspecialistasComponentDialog {
 
-  constructor(
-    public dialogRef: MatDialogRef<DialogEspecialistasComponentDialog>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
-
-}
 
 
 

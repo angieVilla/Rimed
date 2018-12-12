@@ -1,17 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Inject } from '@angular/core';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
 
-
+export interface DialogData {
+  animal: string;
+  nameSp: string;
+}
 @Component({
   selector: 'app-dialog-especialistas',
   templateUrl: './dialog-especialistas.component.html',
   styleUrls: ['./dialog-especialistas.component.less']
 })
-export class DialogEspecialistasComponent implements OnInit {
+export class DialogEspecialistasComponent {
 
-  constructor() { }
+  constructor(
+    public dialogRef: MatDialogRef<DialogEspecialistasComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
-  ngOnInit() {
+  onNoClick(): void {
+    this.dialogRef.close();
   }
 
 }
