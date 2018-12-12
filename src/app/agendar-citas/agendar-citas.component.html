@@ -1,13 +1,31 @@
-<br>
-<br>
-<br>
-<br>
-<br>
+<div class="height-15"></div>
 <mat-form-field>
   <mat-select placeholder="Tipo de documento">
-    <mat-option *ngFor="let food of foods" [value]="food.value">
-      {{food.viewValue}}
+    <mat-option *ngFor="let documento of documentos" [value]="documento.value">
+      {{documento.viewValue}}
     </mat-option>
   </mat-select>
 </mat-form-field>
+
+<h4>Fecha de nacimiento</h4>
+
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="">
+      <mat-datepicker-toggle matSuffix [for]
+      ="picker"></mat-datepicker-toggle>          
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+  
+
+  <mat-form-field>
+    <mat-select placeholder="Listado de especialistas">
+      <mat-option *ngFor="let especialista of especialistas" [value]
+      ="especialistas">
+        {{especialista.viewValue}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
 
