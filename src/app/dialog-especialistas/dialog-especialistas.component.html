@@ -1,14 +1,66 @@
-<p>
+<!-- <p>
   dialog-especialistas works!
-</p>
+</p> -->
 
-<div mat-dialog-content>
-    <p>What's your favorite animal?</p>
-    <!-- <mat-form-field>
-      <input matInput [(ngModel)]="data.animal">
-    </mat-form-field> -->
+<!-- <div mat-dialog-content>
+    <p>What's your favorite animal?</p>   
   </div>
   <div mat-dialog-actions>
     <button mat-button (click)="onNoClick()">No Thanks</button>
     <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
+  </div> -->
+
+  <div mat-dialog-content layout-gt-sm="column" class="md-dialog">
+      <mat-card flex-gt-md="column">
+          <img mat-card-image src="assets/img/imageFisio.jpg">
+          <mat-card-title>Mi Experiencia</mat-card-title>
+          <mat-card-subtitle>Conoce un poco más de mi</mat-card-subtitle>
+          <mat-divider></mat-divider>
+          <mat-list>
+            <h3 matSubheader>Datos personales</h3>
+            <mat-list-item>
+              <mat-icon matListAvatar>account_box</mat-icon>
+              <h4 matLine>John Jameson</h4>
+              <p matLine>Fisioterapeuta</p>             
+              <h4 matLine>Correo electronico:</h4>
+              <p matLine>jameson@gmail.com</p>
+            </mat-list-item>
+            <mat-divider matInset></mat-divider>
+            <mat-list-item>
+              <mat-icon matListAvatar>sentiment_very_satisfied</mat-icon>
+              <h4 matLine>Habilidades a Destacar:</h4>
+              <hr>
+              <p matLine><i class="material-icons checkIcon">check</i> Especialista en dolores lumbares y cervicales</p>
+              <p matLine><i class="material-icons checkIcon">check</i> Hábil con pacientes de avanzada edad y niños</p>
+            </mat-list-item>
+            <mat-divider matInset></mat-divider>
+            <mat-list-item>
+              <mat-icon matListAvatar>school</mat-icon>
+              <h4 matLine>Egresado de la Universidad</h4>
+              <p matLine>Universidad Autónoma de Madrid </p>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            <h3 matSubheader>Experiencia Laboral</h3>
+            <mat-list-item>
+              <mat-icon matListAvatar>access_time</mat-icon>
+              <h4 matLine>Mayo 2014 - Septiembre 2016</h4>
+              <p matLine>Centro de Especialistas Lansys</p>
+            </mat-list-item>
+            <mat-divider matInset></mat-divider>
+            <mat-list-item>
+              <mat-icon matListAvatar>business_center</mat-icon>
+              <p matLine>
+                <i class="material-icons checkIcon">arrow_right</i>
+                Aplicación de tratamientos de rehabilitación a personas mayores afectadas por Parkinson,Alzheimer  ó  Ictus</p>
+              <p matLine>
+                <i class="material-icons checkIcon">arrow_right</i>
+                Valoraciones para  prestaciones  por  dependencia basándose en las escalas de Tinetti,
+                índice de Katz, e índice de Barthel</p>
+            </mat-list-item>
+          </mat-list>
+          <mat-divider></mat-divider>
+          <mat-card-actions>
+            <button mat-button color="primary" class="text-upper" (click)="onNoClick()">Cerrar</button>
+          </mat-card-actions>
+        </mat-card>
   </div>

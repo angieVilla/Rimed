@@ -1,4 +1,4 @@
-<h2>Lista de Medicos Especialistas en {{name}}</h2>
+<div class="titleEspecialist">Lista de Medicos Especialistas en {{name}}</div>
 <div class="example-header">
     <mat-form-field>
       <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Filter">
@@ -7,41 +7,41 @@
   
   <div class="example-container mat-elevation-z8">
   
-    <mat-table [dataSource]="dataSource" matSort>
+    <mat-table [dataSource]="dataSource" matSort color="primary">
   
       <!-- ID Column -->
       <ng-container matColumnDef="id">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header color="primary"> ID </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.id}} </mat-cell>
       </ng-container>
         
       <!-- Name Column -->
       <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header> NOMBRE </mat-header-cell>
         <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
       </ng-container>
 
       <!-- Title Column -->
       <ng-container matColumnDef="title">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Titulo </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> TITULO </mat-header-cell>
           <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
         </ng-container>
 
       <!-- Specialty Column -->
       <ng-container matColumnDef="specialty">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Especialidad </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> ESPECIALIDAD </mat-header-cell>
           <mat-cell *matCellDef="let row"> {{row.specialty}} </mat-cell>
         </ng-container>
   
       <!-- Progress Column -->
       <ng-container matColumnDef="progress">
-          <mat-header-cell *matHeaderCellDef mat-sort-header> Progress </mat-header-cell>
+          <mat-header-cell *matHeaderCellDef mat-sort-header> CALIFICACION <mat-icon class="iconRow">thumb_up</mat-icon> </mat-header-cell>
           <mat-cell *matCellDef="let row"> {{row.progress}}% </mat-cell>
       </ng-container>
 
       <!-- Color Column -->
       <ng-container matColumnDef="color">
-        <mat-header-cell *matHeaderCellDef mat-sort-header> Color </mat-header-cell>
+        <mat-header-cell *matHeaderCellDef mat-sort-header><mat-icon class="iconRow">chrome_reader_mode</mat-icon> </mat-header-cell>
         <mat-cell *matCellDef="let row" [style.color]="row.color"> 
           <button mat-icon-button #menuTrigger="matMenuTrigger"  [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>

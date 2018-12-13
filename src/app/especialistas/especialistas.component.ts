@@ -67,7 +67,8 @@ export class EspecialistasComponent {
   //DIALOG
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogEspecialistasComponent, {
-      width: '250px',
+     maxWidth: '60%',
+     maxHeight:'560px',
       data: {name: this.name, animal: this.animal}
     });
 
@@ -101,8 +102,8 @@ const COLORS = ['maroon', 'red', 'orange', 'yellow', 'olive', 'green', 'purple',
 const NAMES = ['Maia', 'Asher', 'Olivia', 'Atticus', 'Amelia', 'Jack',
   'Charlotte', 'Theodore', 'Isla', 'Oliver', 'Isabella', 'Jasper',
   'Cora', 'Levi', 'Violet', 'Arthur', 'Mia', 'Thomas', 'Elizabeth'];
-const SPECIALTIES = ['Fisioterapia','Fisitria','Terapia Ocupacional'];
-const TITLES = ['Fisioterapeuta','Especialistas en fisiatria','Especialista en Terapia Ocupacional'];
+const SPECIALTIES = ['Fisioterapia','Fisiatria','Terapia Ocupacional'];
+const TITLES = ['Fisioterapeuta','Especialista en fisiatria','Especialista en Terapia Ocupacional'];
 
 export interface UserData {
   id: string;
