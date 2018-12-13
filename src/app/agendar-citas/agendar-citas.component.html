@@ -17,7 +17,7 @@
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
 
-  
+    <h4>Especialistas</h4>
 
   <mat-form-field>
     <mat-select placeholder="Listado de especialistas">
@@ -28,4 +28,21 @@
     </mat-select>
   </mat-form-field>
 
+  <h4>Datos de especialistas</h4>
 
+  <table matSort>
+    <tr>
+      <th mat-sort-header="nombre">Nombre</th>
+      <th mat-sort-header="especialidad">Especialidad</th>
+      <th mat-sort-header="telefono">Telefono</th>
+      <th mat-sort-header="direccion">Direcciòn</th>
+      <th mat-sort-header="correo electronico">Correo electronico</th>
+    </tr>
+    <tr *ngFor="let dato of datos">
+      <td>{{ dato.nombre }}</td>
+      <td>{{ dato.especialidad }}</td>
+      <td>{{ dato.telefono }}</td>
+      <td>{{ dato.direccion }}</td>
+      <td>{{ dato.correoelectronico }}</td>
+    </tr>
+  </table>
